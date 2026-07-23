@@ -1,12 +1,12 @@
-name: test-work
+name: vineel
 on: workflow_dispatch
 jobs:
   job-1:
     runs-on: ubuntu-22.04
     steps:
-      - run: echo "step 1"
-      - run: date
-      - run: hostname
-      - run: free -m
-      - run: df -h
-      
+      - name: system-info
+        run: |
+         echo "this first line"
+         date
+         hostname
+        
