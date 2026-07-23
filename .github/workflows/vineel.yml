@@ -1,12 +1,8 @@
-name: vineel
-on: workflow_dispatch
+name: work-flow
+on: push
 jobs:
   job-1:
     runs-on: ubuntu-22.04
     steps:
-      - name: system-info
-        run: |
-         echo "this first line"
-         date
-         hostname
-        
+      - name: print message
+        run: echo "Hello students"
