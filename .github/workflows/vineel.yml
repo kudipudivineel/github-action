@@ -1,8 +1,16 @@
-name: work-flow
+name: vineel
 on: push
 jobs:
-  job-1:
+  build:
+   runs-on: ubuntu-22.04
+   steps:
+     - run: echo building
+  testing:
     runs-on: ubuntu-22.04
     steps:
-      - name: print message
-        run: echo "Hello students"
+      - run: echo testing
+  deploy:
+    runs-on: ubuntu-22.04
+    steps:
+      - run: echo deploy
+      
