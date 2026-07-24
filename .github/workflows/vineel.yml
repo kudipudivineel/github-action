@@ -5,5 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: build
-        run: echo "building${{var.HOME}}
+        run: echo "building${{var.HOME}}"
       
