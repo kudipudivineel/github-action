@@ -2,15 +2,8 @@ name: vineel
 on: push
 jobs:
   build:
-   runs-on: ubuntu-22.04
-   steps:
-     - run: echo building
-  testing:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
-      - run: echo testing
-  deploy:
-    runs-on: ubuntu-22.04
-    steps:
-      - run: echo deploy
+      - name: build
+        run: echo "building${{var.HOME}}
       
