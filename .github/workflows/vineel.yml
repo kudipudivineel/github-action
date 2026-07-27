@@ -4,6 +4,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: build
-        run: echo "building${{vars.HOME}}"
+      - name: checkout scm
+        uses: actions/checkout@v4
+      - name: print a file
+        run: cat index.html
       
