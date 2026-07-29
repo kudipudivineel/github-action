@@ -1,11 +1,13 @@
-name: vineel
-on: push
+name: test-1
+on: workflow_dispatch:
+ inputs:
+      environment:
+        description: "Select Environment"
+        required: true
+        default: dev
 jobs:
-  build:
+  test-inputs:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout scm
-        uses: actions/checkout@v4
-      - name: print a file
-        run: cat index.html
-      
+      - name: deploy the application
+        run: echo " deploying app into ${{ inputs.environment}}"
