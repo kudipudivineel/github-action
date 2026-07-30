@@ -1,12 +1,11 @@
-name: test-1
+name: test
 on: push
 jobs:
-  test-context:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: using context variable
-        run: |
-          echo "this work is trigger ${{github.actor}}"
-          echo "this repo name ${{github.repository}}"
-      - name: print all variable in github
-        run: echo "${{toJson(github)}}"
+      - name: step1
+        id: step1
+        run: echo "version=0.1">>$GITHUB_OUTPUT
+      - name: step2
+        run: echo the version "${{steps.step1.outputs.version}}"
