@@ -8,3 +8,5 @@ jobs:
         run: |
           echo "this work is trigger ${{github.actor}}"
           echo "this repo name ${{github.repository}}"
+      - name: print all variable in github
+        run: echo "${{toJson(github)}}"
