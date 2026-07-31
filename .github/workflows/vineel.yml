@@ -1,17 +1,10 @@
-name: test-if
-on: 
-  push:
-    branches:
-      - main
-      - test
+
+name: 
+on: push
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: run if main branch push
-        if: github.ref =='refs/heads/main'
-        run: echo "this is main"
-      - name: run this step
-        run: echo "this is manual"
-    
-   
+      - name: run if or
+        if: github.actor == 'kudipudivineel' || github.actor  == 'ddevsec-blip'
+        run: echo "triggered"
