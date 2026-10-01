@@ -5,8 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print a file
-        run: echo "vineel"
-
+        run: echo vineel
 
 
 
